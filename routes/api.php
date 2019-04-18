@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('areas','AreaController@getAll')->name('getAllAreas');
+Route::post('areas/add','AreaController@add')->name('addAreas');
+Route::get('areas/{id}','AreaController@get')->name('getAreas');
+Route::post('areas/{id}','AreaController@edit')->name('editAreas');
+Route::get('areas/delete/{id}','AreaController@delete')->name('deleteAreas');
