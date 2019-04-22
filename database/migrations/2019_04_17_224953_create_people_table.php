@@ -19,10 +19,10 @@ class CreatePeopleTable extends Migration
             $table->integer('identification');
             $table->date('birthdate');
             $table->string('gender',12);
-            $table->integer('countrie_id')->unsigned();
+            $table->unsignedBigInteger('countrie_id')->unsigned();
             $table->foreign('countrie_id')->references('id')->on('countries');
             $table->string('email')->unique();
-            $table->integer('area_id')->unsigned();
+            $table->unsignedBigInteger('area_id')->unsigned();
             $table->foreign('area_id')->references('id')->on('areas');
             $table->string('password');
             $table->string('comments',900);
