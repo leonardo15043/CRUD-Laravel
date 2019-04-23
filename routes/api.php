@@ -40,5 +40,9 @@ Route::middleware(['jwt.auth'])->group(function(){
 
   Route::get('country','CountryController@getAll')->name('getAllCountry');
 
+  //User
+
+  Route::get('user/{id}','UserController@get')->name('getUser');
+
 
 });
