@@ -36,4 +36,9 @@ Route::middleware(['jwt.auth'])->group(function(){
   Route::post('people/edit/{id}','PeopleController@edit')->name('editPeople');
   Route::get('people/delete/{id}','PeopleController@delete')->name('deletePeople');
 
+  //Country
+
+  Route::get('country','CountryController@getAll')->name('getAllCountry');
+
+
 });
